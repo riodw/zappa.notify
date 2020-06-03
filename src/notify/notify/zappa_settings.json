@@ -1,0 +1,28 @@
+{
+    "dev": {
+        "aws_region": "us-east-1",
+        "django_settings": "notify.settings",
+        // "certificate_arn": "",
+        "domain": "notify.medtricslab.com",
+        "slim_handler": true,
+        "route53_enabled": false,
+        "profile_name": "rio",
+        "project_name": "notify",
+        "s3_bucket": "medtrics-notify",
+        "apigateway_enabled": true,
+        "certificate": "./SSL/STAR_medtricslab_com.crt", // SSL certificate file location. Used to manually certify a custom domain
+        "certificate_key": "./SSL/STAR_medtricslab_com.key", // SSL key file location. Used to manually certify a custom domain
+        "certificate_chain": "./SSL/STAR_medtricslab_com_bundle.pem" // SSL certificate chain file location. Used to manually certify a custom domain
+    },
+    "prod": {
+        "aws_region": "us-east-2",
+        "django_settings": "notify.settings",
+        "certificate_arn": "[]",
+        "domain": "[]",
+        "route53_enabled": false,
+        "profile_name": "[]",
+        "project_name": "lambda-notifications",
+        "s3_bucket": "[]-zappa",
+		"apigateway_enabled": true
+    }
+}
